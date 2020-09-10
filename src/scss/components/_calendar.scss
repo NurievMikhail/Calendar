@@ -1,0 +1,101 @@
+.calendar {
+  box-shadow: 0px 1px 4px #707070;
+  width: 306px;
+  height: 367px;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    height: 2em;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 1px solid transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25em 0.75em;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  &__month {
+    margin-right: 5px;
+  }
+
+  &__month,
+  &__year {
+    vertical-align: middle;
+    color: #4c4c4c;
+  }
+
+  &__month-data {
+    border-spacing: 16px;
+  }
+
+  &__day-of-week {
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
+    color: #7057cd;
+  }
+
+  &__day {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #4c4c4c;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f2f4f5;
+    }
+
+    &_today {
+      background: #ffffff;
+      border: 1px solid #876fdf;
+    }
+
+    &_different-month {
+      font-family: 'PT Sans', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: #876fdf;
+    }
+
+    &_selected,
+    &:active {
+      background-color: #876fdf;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #876fdf;
+      }
+    }
+  }
+}
