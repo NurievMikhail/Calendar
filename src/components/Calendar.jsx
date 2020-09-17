@@ -21,9 +21,10 @@ const MonthEnum = {
 
 function Calendar({ date, years, months, daysOfWeek }) {
   const [calendarDate, setCalendarDate] = React.useState(date);
-  const [selectedDates, setSelectedDates] = React.useState(
-    JSON.parse(localStorage.getItem('selectedDates')).map((date) => new Date(parseInt(date))),
-  );
+  const initialSelectedDates = localStorage.getItem('selectedDates')
+    ? JSON.parse(localStorage.getItem('selectedDates')).map((date) => new Date(parseInt(date)))
+    : [];
+  const [selectedDates, setSelectedDates] = React.useState(initialSelectedDates);
   const currentDate = new Date();
 
   const checkIfCurrentMonth = (date) => calendarDate.getMonth() === date.getMonth();
